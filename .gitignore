@@ -1,0 +1,8 @@
+/target/*
+/websocket/*
+*.war
+*.ear
+*.class
+*.jar
+
+
