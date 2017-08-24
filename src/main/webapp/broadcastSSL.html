@@ -7,8 +7,12 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        
         <div>
+            <label>url</label>
+            <input type="text" id="urlinput"/>
+        </div>
+        <div>
+            <label>message</label>
             <input type="text" id="messageinput"/>
         </div>
         <div>
@@ -33,7 +37,7 @@
                     return;
                 }
                 // Create a new instance of the websocket
-                webSocket = new WebSocket("wss://45.33.7.205:8443/WebsocketUtils-1.0/broadcast");
+                webSocket = new WebSocket(document.getElementById("urlinput").value);
                  
                 /**
                  * Binds functions to the listeners for the websocket.

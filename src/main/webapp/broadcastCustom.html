@@ -8,7 +8,12 @@
     </head>
     <body>
         
+         <div>
+            <label>Target websocket</label>
+            <input type="text" id="urlinput"/>
+        </div>
         <div>
+            <label>Message</label>
             <input type="text" id="messageinput"/>
         </div>
         <div>
@@ -33,7 +38,7 @@
                     return;
                 }
                 // Create a new instance of the websocket
-                webSocket = new WebSocket("ws://localhost:8081/WebsocketUtils/echo");
+                webSocket = new WebSocket(document.getElementById("urlinput"));
                  
                 /**
                  * Binds functions to the listeners for the websocket.
